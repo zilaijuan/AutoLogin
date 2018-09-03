@@ -62,9 +62,9 @@ def login():
     #print(sina.text)
     if match(".*DOCTYPE.*", sina.text) == None:
         switch_hm1 = s.get(sina.headers['Location'],allow_redirects=False)
-        print(switch_hm1.headers)
+#        print(switch_hm1.headers)
         switchphp = s.get(portal+switch_hm1.headers['Location'],allow_redirects=False)
-        print(switchphp.cookies.get_dict())
+#        print(switchphp.cookies.get_dict())
         ck = switchphp.cookies
         loginInfo = {'username':username,'password':password}
         #ck = {"PHPSESSID":"t25bao5qm3219mndrhdltgo455"}
