@@ -9,10 +9,14 @@ Created on Mon Sep 03 09:55:09 2018
 from requests import sessions
 from re import match
 from os import path
-from ConfigParser import ConfigParser
+#from ConfigParser import ConfigParser
 from argparse import ArgumentParser
 import urlparse
 #from configobj import ConfigObj
+try:#python2
+    from ConfigParser import ConfigParser
+except ImportError:#python3
+    from configparser import ConfigParser
 
 username=''
 password=''
